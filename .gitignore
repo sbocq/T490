@@ -40,9 +40,14 @@
 !/etc/systemd/system/hibernate.target.wants/intel-undervolt.service
 !/etc/systemd/system/hybrid-sleep.target.wants/intel-undervolt.service
 
-# Thermald
+# Thermald (dnf install thermald)
 !/etc/thermald/
 !/usr/lib/systemd/system/thermald.service
 !/etc/systemd/system/dbus-org.freedesktop.thermald.service
 !/etc/systemd/system/multi-user.target.wants/thermald.service
+
+# TLP (dnf install tlp)
+!/etc/default/tlp
+!/usr/lib/systemd/system/tlp.service
+!/etc/systemd/system/multi-user.target.wants/tlp.service
 
