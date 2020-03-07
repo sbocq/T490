@@ -40,3 +40,9 @@
 !/etc/systemd/system/hibernate.target.wants/intel-undervolt.service
 !/etc/systemd/system/hybrid-sleep.target.wants/intel-undervolt.service
 
+# Thermald
+!/etc/thermald/
+!/usr/lib/systemd/system/thermald.service
+!/etc/systemd/system/dbus-org.freedesktop.thermald.service
+!/etc/systemd/system/multi-user.target.wants/thermald.service
+
