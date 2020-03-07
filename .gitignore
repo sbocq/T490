@@ -10,6 +10,9 @@
 !/usr/lib/
 /usr/lib/*
 
+# modules
+!/etc/modprobe.d
+/etc/modprobe.d/*
 
 # systemd
 !/usr/lib/systemd/
@@ -58,3 +61,6 @@
 !/usr/lib/systemd/system/tlp.service
 !/etc/systemd/system/multi-user.target.wants/tlp.service
 
+
+# iwlwifi
+!/etc/modprobe.d/iwlwifi.conf
