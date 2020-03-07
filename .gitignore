@@ -64,3 +64,9 @@
 
 # iwlwifi
 !/etc/modprobe.d/iwlwifi.conf
+
+# RPM fusion
+# $ wget -P /tmp https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-31.noarch.rpm
+# $ sudo dnf -y localinstall /tmp/rpmfusion-free-release-31.noarch.rpm
+# $ wget -P /tmp https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-31.noarch.rpm
+# $ sudo dnf -y localinstall /tmp/rpmfusion-nonfree-release-31.noarch.rpm
