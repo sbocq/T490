@@ -9,8 +9,34 @@
 /usr/*
 !/usr/lib/
 /usr/lib/*
+
+
+# systemd
 !/usr/lib/systemd/
 /usr/lib/systemd/*
 !/usr/lib/systemd/system
 /usr/lib/systemd/system/*
+
+!/etc/systemd/
+/etc/systemd/*
+!/etc/systemd/system/
+/etc/systemd/system/*
+!/etc/systemd/system/multi-user.target.wants/
+/etc/systemd/system/multi-user.target.wants/*
+!/etc/systemd/system/suspend.target.wants/
+/etc/systemd/system/suspend.target.wants/*
+!/etc/systemd/system/hibernate.target.wants/
+/etc/systemd/system/hibernate.target.wants/*
+!/etc/systemd/system/hybrid-sleep.target.wants/
+/etc/systemd/system/hybrid-sleep.target.wants/*
+
+
+# Intel undervolt (https://github.com/kitsunyan/intel-undervolt)
+!/etc/intel-undervolt.conf
+!/usr/lib/systemd/system/intel-undervolt.service
+!/usr/lib/systemd/system/intel-undervolt-loop.service
+!/etc/systemd/system/multi-user.target.wants/intel-undervolt.service
+!/etc/systemd/system/suspend.target.wants/intel-undervolt.service
+!/etc/systemd/system/hibernate.target.wants/intel-undervolt.service
+!/etc/systemd/system/hybrid-sleep.target.wants/intel-undervolt.service
 
