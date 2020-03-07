@@ -9,6 +9,10 @@
 /usr/*
 !/usr/lib/
 /usr/lib/*
+!/usr/share
+/usr/share/*
+!/usr/share/applications
+/usr/share/applications/*
 
 # modules
 !/etc/modprobe.d
@@ -65,8 +69,21 @@
 # iwlwifi
 !/etc/modprobe.d/iwlwifi.conf
 
+
+# Intel i915 firmware
+# $ grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+!/etc/default/grub
+
+
 # RPM fusion
-# $ wget -P /tmp https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-31.noarch.rpm
-# $ sudo dnf -y localinstall /tmp/rpmfusion-free-release-31.noarch.rpm
-# $ wget -P /tmp https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-31.noarch.rpm
-# $ sudo dnf -y localinstall /tmp/rpmfusion-nonfree-release-31.noarch.rpm
+# $ wget -P /tmp https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+# $ dnf -y localinstall /tmp/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+# $ wget -P /tmp https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+# $ dnf -y localinstall /tmp/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+# vaapi & mpv
+# $ dnf -y install libva libva-intel-driver libva-vdpau-driver libva-utils
+# $ dnf -y install mpv
+!/usr/share/applications/mpv.desktop
+
+
