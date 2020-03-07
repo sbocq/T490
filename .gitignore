@@ -40,13 +40,20 @@
 !/etc/systemd/system/hibernate.target.wants/intel-undervolt.service
 !/etc/systemd/system/hybrid-sleep.target.wants/intel-undervolt.service
 
-# Thermald (dnf install thermald)
+
+# Thermald
+# $ dnf -y install thermald
 !/etc/thermald/
 !/usr/lib/systemd/system/thermald.service
 !/etc/systemd/system/dbus-org.freedesktop.thermald.service
 !/etc/systemd/system/multi-user.target.wants/thermald.service
 
-# TLP (dnf install tlp)
+
+# TLP
+# $ dnf -y install tlp
+# $ dnf -y install http://repo.linrunner.de/fedora/tlp/repos/releases/tlp-release.fc$(rpm -E %fedora).noarch.rpm
+# $ dnf -y install akmod-acpi_call smartmontools
+
 !/etc/default/tlp
 !/usr/lib/systemd/system/tlp.service
 !/etc/systemd/system/multi-user.target.wants/tlp.service

@@ -52,8 +52,8 @@ MAX_LOST_WORK_SECS_ON_BAT=60
 #   you should know what you're doing! You *must* disable your distribution's
 #   governor settings or conflicts will occur.
 # Default: <none>
-#CPU_SCALING_GOVERNOR_ON_AC=powersave
-#CPU_SCALING_GOVERNOR_ON_BAT=powersave
+CPU_SCALING_GOVERNOR_ON_AC=performance
+CPU_SCALING_GOVERNOR_ON_BAT=powersave
 
 # Set the min/max frequency available for the scaling governor.
 # Possible values depend on your CPU. For available frequencies see
@@ -318,6 +318,7 @@ RESTORE_DEVICE_STATE_ON_STARTUP=0
 # Separate multiple devices with spaces.
 # Default: <none>
 #DEVICES_TO_DISABLE_ON_STARTUP="bluetooth wifi wwan"
+DEVICES_TO_DISABLE_ON_STARTUP="bluetooth"
 
 # Radio devices to enable on startup: bluetooth, wifi, wwan.
 # Separate multiple devices with spaces.
@@ -352,8 +353,8 @@ RESTORE_DEVICE_STATE_ON_STARTUP=0
 # START_CHARGE_THRESH value and stops when exceeding the STOP_CHARGE_THRESH value.
 # Main / Internal battery (values in %)
 # Default: <none>
-#START_CHARGE_THRESH_BAT0=75
-#STOP_CHARGE_THRESH_BAT0=80
+START_CHARGE_THRESH_BAT0=50
+STOP_CHARGE_THRESH_BAT0=80
 # Ultrabay / Slice / Replaceable battery (values in %)
 # Default: <none>
 #START_CHARGE_THRESH_BAT1=75
