@@ -4,6 +4,7 @@
 !/etc/
 /etc/*
 !/etc/default/
+!/etc/pulse/
 
 !/usr/
 /usr/*
