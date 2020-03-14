@@ -10,10 +10,15 @@
 /usr/*
 !/usr/lib/
 /usr/lib/*
+!/usr/local
+/usr/local/*
+!/usr/local/bin
+/usr/local/bin/*
 !/usr/share
 /usr/share/*
 !/usr/share/applications
 /usr/share/applications/*
+
 
 # modules
 !/etc/modprobe.d
@@ -40,6 +45,8 @@
 
 
 # Intel undervolt (https://github.com/kitsunyan/intel-undervolt)
+# $ make && make install
+# $ systemctl enable intel-undervolt
 !/etc/intel-undervolt.conf
 !/usr/lib/systemd/system/intel-undervolt.service
 !/usr/lib/systemd/system/intel-undervolt-loop.service
@@ -51,6 +58,7 @@
 
 # Thermald
 # $ dnf -y install thermald
+# $ systemctl enable thermald
 !/etc/thermald/
 !/usr/lib/systemd/system/thermald.service
 !/etc/systemd/system/dbus-org.freedesktop.thermald.service
@@ -88,3 +96,14 @@
 !/usr/share/applications/mpv.desktop
 
 
+# Custom init
+!/usr/local/bin/tp-init
+!/usr/lib/systemd/system/tp-init.service
+!/etc/systemd/system/multi-user.target.wants/tp-init.service
+!/etc/systemd/system/suspend.target.wants/tp-init.service
+!/etc/systemd/system/hibernate.target.wants/tp-init.service
+!/etc/systemd/system/hybrid-sleep.target.wants/tp-init.service
+
+
+# Check is everything is there
+# $ diff -rq . /|grep -v 'Only in /'

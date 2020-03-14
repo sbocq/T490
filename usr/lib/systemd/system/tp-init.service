@@ -1,0 +1,10 @@
+[Unit]
+Description=My Thinkpad init settings
+After=multi-user.target suspend.target hibernate.target hybrid-sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/tp-init
+
+[Install]
+WantedBy=multi-user.target suspend.target hibernate.target hybrid-sleep.target
