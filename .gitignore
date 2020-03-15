@@ -42,7 +42,8 @@
 /etc/systemd/system/hibernate.target.wants/*
 !/etc/systemd/system/hybrid-sleep.target.wants/
 /etc/systemd/system/hybrid-sleep.target.wants/*
-
+!/etc/systemd/system/timers.target.wants/
+/etc/systemd/system/timers.target.wants/*
 
 # Intel undervolt (https://github.com/kitsunyan/intel-undervolt)
 # $ make && make install
@@ -83,6 +84,9 @@
 # $ grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 !/etc/default/grub
 
+# Trim (auto on Fedora 32)
+# $ sudo systemctl enable --now fstrim.timer
+!/etc/systemd/system/timers.target.wants/fstrim.timer
 
 # RPM fusion
 # $ wget -P /tmp https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
