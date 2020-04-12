@@ -5,6 +5,8 @@
 /etc/*
 !/etc/default/
 !/etc/pulse/
+!/etc/sysconfig
+etc/sysconfig/network-scripts/keys*
 
 !/usr/
 /usr/*
