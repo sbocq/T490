@@ -9,6 +9,9 @@
 etc/sysconfig/network-scripts/keys*
 etc/sysconfig/virt*
 !/etc/sysctl.d
+!/etc/dnf
+/etc/dnf/*
+!/etc/dnf/dnf.conf
 
 !/usr/
 /usr/*
