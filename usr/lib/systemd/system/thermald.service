@@ -1,11 +1,13 @@
 [Unit]
 Description=Thermal Daemon Service
+ConditionVirtualization=no
 
 [Service]
 Type=dbus
-SuccessExitStatus=1
+SuccessExitStatus=2
 BusName=org.freedesktop.thermald
-ExecStart=/usr/sbin/thermald --no-daemon --dbus-enable
+ExecStart=/usr/sbin/thermald --systemd --dbus-enable --adaptive
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target

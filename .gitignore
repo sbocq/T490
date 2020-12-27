@@ -7,6 +7,7 @@
 !/etc/pulse/
 !/etc/sysconfig
 etc/sysconfig/network-scripts/keys*
+etc/sysconfig/virt*
 !/etc/sysctl.d
 
 !/usr/
